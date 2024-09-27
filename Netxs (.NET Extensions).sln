@@ -10,12 +10,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "$root", "$root", "{502D8ED8
 		readme.md = readme.md
 	EndProjectSection
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Netxs.Base", "src\std\Netxs.Base.shproj", "{540EFB24-AB11-41C0-B281-B16620F832B6}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Netxs.Memory", "src\memory\Netxs.Memory.shproj", "{B52A6DFC-831B-4416-95EF-A86AD53AE7A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "test\Test.csproj", "{7C72D110-69FC-4300-92CE-A6576DA70826}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C72D110-69FC-4300-92CE-A6576DA70826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C72D110-69FC-4300-92CE-A6576DA70826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C72D110-69FC-4300-92CE-A6576DA70826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C72D110-69FC-4300-92CE-A6576DA70826}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73B6048B-5B2D-47BD-900B-3BD71E5AF920}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\std\std.projitems*{540efb24-ab11-41c0-b281-b16620f832b6}*SharedItemsImports = 13
+		src\memory\memory.projitems*{b52a6dfc-831b-4416-95ef-a86ad53ae7a8}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
