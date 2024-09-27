@@ -1,14 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="..\src\std\std.projitems" Label="Shared" />
+	
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <IsTestProject>true</IsTestProject>
     <IsPackable>false</IsPackable>
     <Nullable>enable</Nullable>
-	  
-	<RootNamespace>Netxs.Test</RootNamespace>
-	<BaseOutputPath>..\..\build</BaseOutputPath>
+
+    <NoWarn>$(NoWarn);NU5105;NU5128;NU5100;NU5118;0419,0649;IDE0290,IDE1006,IDE0130</NoWarn>
+	<SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+	<TestDir>$(RepoRoot)test\</TestDir>
+	<SrcDir>$(RepoRoot)src\</SrcDir>
+	<BaseOutputPath>..\build</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +22,8 @@
     <PackageReference Include="NUnit" Version="3.14.0" />
     <PackageReference Include="NUnit.Analyzers" Version="3.9.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+	<Using Include="System.Diagnostics"/>
+	<Using Include="System.Reflection"/>
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
