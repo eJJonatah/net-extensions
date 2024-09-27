@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>540efb24-ab11-41c0-b281-b16620f832b6</SharedGUID>
+    <Import_RootNamespace>std</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Standart\" />
+    <Compile Include="$(MSBuildThisFileDirectory)aliases.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)standart\TextExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\Argument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\ResultWasEmpty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\Thrower.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)symbols.txt" />
+  </ItemGroup>
+</Project>

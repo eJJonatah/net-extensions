@@ -1,0 +1,4 @@
+# Changes the access level from all the types in the shared projects
+# from internal to public
+
+NETXS_ASPUBLIC

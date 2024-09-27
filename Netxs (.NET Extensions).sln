@@ -14,7 +14,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Netxs.Base", "src\std\Netxs
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Netxs.Memory", "src\memory\Netxs.Memory.shproj", "{B52A6DFC-831B-4416-95EF-A86AD53AE7A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "test\Test.csproj", "{7C72D110-69FC-4300-92CE-A6576DA70826}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netxs.Test", "test\Netxs.Test.csproj", "{7C72D110-69FC-4300-92CE-A6576DA70826}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +35,7 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\std\std.projitems*{540efb24-ab11-41c0-b281-b16620f832b6}*SharedItemsImports = 13
+		src\std\std.projitems*{7c72d110-69fc-4300-92ce-a6576da70826}*SharedItemsImports = 5
 		src\memory\memory.projitems*{b52a6dfc-831b-4416-95ef-a86ad53ae7a8}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
