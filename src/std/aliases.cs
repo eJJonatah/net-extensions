@@ -13,6 +13,7 @@ global using MMarshal = System.Runtime.InteropServices.MemoryMarshal;
 
 using System.Runtime.CompilerServices;
 using System.Buffers;
+using System.Security;
 
 static class NetxsAliases
 {
@@ -24,5 +25,10 @@ static class NetxsAliases
         var rent = MemoryPool<T>.Shared.Rent((int)length);
         if (!skipInit) rent.Memory.Span.Clear();
         return rent;
+    }
+    [Method(INLINE)] public static uint NotZero(int value, [Const] uint onePlusReplacement)
+    {
+        if (value is <= 0) return onePlusReplacement+1;
+        return (uint)value;
     }
 }

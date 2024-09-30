@@ -338,7 +338,8 @@ static class TextExtensions
 
         return result;
     }
-    
+
+    #region private helpers
     static Chars cutInvariant(this Chars source, Chars between, Chars and, CutOptions options = new())
     {
         Argument.Span_MustNotBe_Empty(between);
@@ -595,4 +596,5 @@ static class TextExtensions
 
         return result;
     }
+    #endregion
 }

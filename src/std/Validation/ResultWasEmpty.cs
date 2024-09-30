@@ -11,8 +11,11 @@ public
 
 sealed class ResultWasEmptyException : Exception
 {
+    public ResultWasEmptyException()
+        : base("The resulting sequence was empty and is not accepted")
+    { }
     public ResultWasEmptyException(string expression)
-        : base($"resulted empty ({expression})")
+        : base($"resulted empty and is not accepted ({expression})")
     { }
     public ResultWasEmptyException(string expression, Exception inner)
         : base($"resulted empty ({expression})", inner)

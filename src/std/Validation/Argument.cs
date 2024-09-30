@@ -97,7 +97,7 @@ static class Argument
     */ [Untrace, Hide] public static void String_MustNotBe_OnlySpaces([NNull, Null] string str, bool allowEmpty = true, [ExpressionOf(nameof(str))] string expression = null!)
     {
         ArgumentNullException.ThrowIfNull(str, expression);
-        if (!allowEmpty) Enumerable_MustBeAtLeast_One(str, expression);
+        if (!allowEmpty) Enumerable_MustBeAtLeast_One(str.GetEnumerator(), expression);
         if (string.IsNullOrWhiteSpace(str)) throw new ArgumentException(
             paramName: expression, 
             message: allowEmpty
@@ -141,5 +141,17 @@ static class Argument
             """);
 
         if (structure.GetHashCode() == defaultHash) throw new ArgumentException($"Structure must not be default ({paramName})", paramName);
+    }
+    public static void Span_IsTooLarge([Const] uint maxSize,  Span<byte> span, [ExpressionOf(nameof(span))] string paramName = null!)
+    {
+        if (span.Length > maxSize) throw new ArgumentException($"""
+Span must not be larger than '{maxSize}'
+""", paramName);
+    }
+    public static void Span_IsTooLarge([Const] uint maxSize, ReadOnlySpan<byte> span, [ExpressionOf(nameof(span))] string paramName = null!)
+    {
+        if (span.Length > maxSize) throw new ArgumentException($"""
+Span must not be larger than '{maxSize}'
+""", paramName);
     }
 }

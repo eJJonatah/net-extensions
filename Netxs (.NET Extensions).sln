@@ -35,7 +35,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\std\std.projitems*{540efb24-ab11-41c0-b281-b16620f832b6}*SharedItemsImports = 13
-		src\std\std.projitems*{7c72d110-69fc-4300-92ce-a6576da70826}*SharedItemsImports = 5
 		src\memory\memory.projitems*{b52a6dfc-831b-4416-95ef-a86ad53ae7a8}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

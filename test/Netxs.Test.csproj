@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\src\std\std.projitems" Label="Shared" />
+  <Import Project="..\src\std\std.projitems" Label="Netxs.Base" />
+  <Import Project="..\src\memory\memory.projitems" Label="Netxs.Memory" />
 	
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>

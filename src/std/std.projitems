@@ -7,6 +7,8 @@
     <Import_RootNamespace>std</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\UniversalInformationSets.cs" />
+    <Folder Include="$(MSBuildThisFileDirectory)Common\" />
     <Folder Include="$(MSBuildThisFileDirectory)Standart\" />
     <Compile Include="$(MSBuildThisFileDirectory)aliases.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)standart\TextExtensions.cs" />
