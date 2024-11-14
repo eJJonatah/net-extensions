@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+
+    <Authors>@ejjonatah</Authors>
+
+    <!-- Pre compilation properties -->
+    <!-- <RootNamespace>...</RootNamespace> -->
+    <NoWarn>$(NoWarn);1735;8500;IDE1005;IDE1006;IDE0290;CA1715</NoWarn>
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <!-- <InvariantGlobalization>True</InvariantGlobalization> -->
+    <AccelerateBuildsInVisualStudio>True</AccelerateBuildsInVisualStudio>
+    <OptimizeImplicitlyTriggeredBuild>True</OptimizeImplicitlyTriggeredBuild>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <AnalysisLevel>preview</AnalysisLevel>
+    <Platforms>AnyCPU;x64</Platforms>
+    <AnalysisMode>All</AnalysisMode>
+    <Optimize>True</Optimize>
+    <TrimMode>full</TrimMode>
+
+    <!-- After compilation properties -->
+    <!-- <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads> -->
+    <UseWindowsThreadPool>True</UseWindowsThreadPool>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <DebugType>pdbonly</DebugType>
+	<!-- <BaseOutputPath>.\build</BaseOutputPath> -->
+    <AssemblyName>Netxs.NUnits</AssemblyName>
+	<!-- <GenerateDocumentationFile>True</GenerateDocumentationFile>-->
+
+  </PropertyGroup>
+  <PropertyGroup Condition="'x64'=='$(Platform)'">
+    <DefineConstants>$(DefineConstants);TARGET_64BIT</DefineConstants>
+  
+  </PropertyGroup>
+  <PropertyGroup Condition="'Release'=='$(Configuration)'">
+    <CodeAnalysisTreatWarningsAsErrors>True</CodeAnalysisTreatWarningsAsErrors>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+
+  </PropertyGroup>
+  <PropertyGroup Condition="'Debug'=='$(Configuration)'">
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+    <PackageReference Include="NUnit.Analyzers" Version="4.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NUnit" Version="4.2.2" />
+    <Using Include="NUnit.Framework" />
+  </ItemGroup>
+
+</Project>

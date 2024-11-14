@@ -11,10 +11,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "$root", "$root", "{D19925C7
 		readme.md = readme.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit (Unit tests)", "test\nunit\NUnit (Unit tests).csproj", "{C9809499-0AD1-4D70-A4DF-ACECCDCCECCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9809499-0AD1-4D70-A4DF-ACECCDCCECCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9809499-0AD1-4D70-A4DF-ACECCDCCECCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9809499-0AD1-4D70-A4DF-ACECCDCCECCB}.Debug|x64.ActiveCfg = Debug|x64
+		{C9809499-0AD1-4D70-A4DF-ACECCDCCECCB}.Debug|x64.Build.0 = Debug|x64
+		{C9809499-0AD1-4D70-A4DF-ACECCDCCECCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9809499-0AD1-4D70-A4DF-ACECCDCCECCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9809499-0AD1-4D70-A4DF-ACECCDCCECCB}.Release|x64.ActiveCfg = Release|x64
+		{C9809499-0AD1-4D70-A4DF-ACECCDCCECCB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
