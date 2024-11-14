@@ -1,0 +1,10 @@
+* text=auto
+
+*.cs     diff=csharp
+
+*.sln       merge=binary
+*.csproj    merge=binary
+*.shproj    merge=binary
+
+*.doc   diff=astextplain
+*.DOC   diff=astextplain
